@@ -20,7 +20,12 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.macosx.exe.debug.358351852." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.1135585631" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.gnu.platform.base.1940034972" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
-							<builder buildPath="${workspace_loc:/XbmcRemote/Debug}" id="cdt.managedbuild.target.gnu.builder.base.1197817923" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base"/>
+							<builder buildPath="${workspace_loc:/XbmcRemote/Debug}" id="cdt.managedbuild.target.gnu.builder.base.1197817923" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Release"/>
+								</outputEntries>
+							</builder>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1532649021" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.103979235" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
 								<option id="gnu.cpp.compiler.option.include.paths.1138331859" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths"/>
@@ -36,7 +41,6 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.base.1929041605" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.893577004" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base">
 								<option id="gnu.cpp.link.option.libs.970550519" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" value="json_linux-gcc-4.2.1_libmt"/>
 									<listOptionValue builtIn="false" value="gtest_main"/>
 									<listOptionValue builtIn="false" value="gmock_main"/>
 								</option>
@@ -52,7 +56,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Main"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Navigation"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="test"/>
 					</sourceEntries>
@@ -102,8 +106,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Main"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Navigation"/>
+						<entry excluding="Main" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/Main"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="test"/>
 					</sourceEntries>
 				</configuration>
@@ -114,12 +119,20 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="XbmcRemote.cdt.managedbuild.target.macosx.exe.1454295610" name="Executable" projectType="cdt.managedbuild.target.macosx.exe"/>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.macosx.exe.release.1091525829;cdt.managedbuild.config.macosx.exe.release.1091525829.;cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.release.948659873;cdt.managedbuild.tool.gnu.cpp.compiler.input.2078200395">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.358351852;cdt.managedbuild.config.gnu.macosx.exe.debug.358351852.;cdt.managedbuild.tool.gnu.c.compiler.base.1143806534;cdt.managedbuild.tool.gnu.c.compiler.input.809272424">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.358351852;cdt.managedbuild.config.gnu.macosx.exe.debug.358351852.;cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.573776424;cdt.managedbuild.tool.gnu.cpp.compiler.input.1293122827">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.358351852;cdt.managedbuild.config.gnu.macosx.exe.debug.358351852.;cdt.managedbuild.tool.gnu.cpp.compiler.base.103979235;cdt.managedbuild.tool.gnu.cpp.compiler.input.2121879475">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.358351852;cdt.managedbuild.config.gnu.macosx.exe.debug.358351852.;cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.841656383;cdt.managedbuild.tool.gnu.c.compiler.input.240146927">
@@ -129,6 +142,4 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
 </cproject>
