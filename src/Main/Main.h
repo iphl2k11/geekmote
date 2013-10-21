@@ -10,13 +10,21 @@
 
 //TODO  make it bost noncopyable
 //
+
+#include "INavigation.h"
 class Main
 {
 public:
+	Main(INavigation &navigation):m_navigation(navigation)
+	{
 
-	Main();
+	}
+
 	~Main();
 	void Execute(int argc, char** argv);
+
+private:
+	INavigation & m_navigation;
 };
 
 
