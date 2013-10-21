@@ -12,6 +12,10 @@
 //
 class Main
 {
+public:
+
+	Main();
+	~Main();
 	void Execute(int argc, char** argv);
 };
 

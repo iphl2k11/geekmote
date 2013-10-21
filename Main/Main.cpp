@@ -6,9 +6,17 @@
  */
 #include "Main.h"
 
-void Main::Execute(int argc, char** argv)
+Main::Main()
 {
 
 }
 
+Main::~Main()
+{
 
+}
+
+void Main::Execute(int argc, char** argv)
+{
+
+}
