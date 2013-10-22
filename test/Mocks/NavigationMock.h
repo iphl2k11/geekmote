@@ -8,7 +8,6 @@
 #ifndef NAVIGATIONMOCK_H_
 #define NAVIGATIONMOCK_H_
 
-
 #include "INavigation.h"
 #include <gmock/gmock.h>
 

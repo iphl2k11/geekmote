@@ -8,7 +8,15 @@
 #ifndef IHELP_H_
 #define IHELP_H_
 
+struct IHelp
+{
+	virtual void BasicInfo() = 0;
 
+	virtual ~IHelp()
+	{
+
+	}
+};
 
 
 #endif /* IHELP_H_ */

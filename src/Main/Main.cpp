@@ -13,14 +13,24 @@ Main::~Main()
 
 void Main::Execute(int argc, char** argv)
 {
-	std::string argv1 = std::string(argv[1]);
-
-	if(argv1 == "Play")
+	if (argc == 1)
 	{
-		this->m_navigation.Play();
+		this->m_help.BasicInfo();
+		return;
 	}
-	else if(argv1== "Pause")
+
+	if (argc == 2)
 	{
-		this->m_navigation.Pause();
+		std::string argv1 = std::string(argv[1]);
+	    //Map with string and boost function goes here
+		//Add boost support
+		if(argv1 == "Play")
+		{
+			this->m_navigation.Play();
+		}
+		else if(argv1== "Pause")
+		{
+			this->m_navigation.Pause();
+		}
 	}
 }

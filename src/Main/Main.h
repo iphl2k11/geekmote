@@ -12,10 +12,12 @@
 //
 
 #include "INavigation.h"
+#include "IHelp.h"
+
 class Main
 {
 public:
-	Main(INavigation &navigation):m_navigation(navigation)
+	Main(INavigation &navigation, IHelp &help):m_navigation(navigation), m_help(help)
 	{
 
 	}
@@ -25,6 +27,7 @@ public:
 
 private:
 	INavigation & m_navigation;
+	IHelp		& m_help;
 };
 
 
