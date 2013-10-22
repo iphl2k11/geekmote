@@ -35,9 +35,22 @@ protected:
 
 };
 
+typedef char* charPtr;
+
 TEST_F(CommandLineParsingTestSuite, TestPlay)
 {
 	ASSERT_TRUE(true);
-//	EXPECT_CALL(*navigationMock, Play()).Times(1);
-//	main->Execute(2,)
+	charPtr testArguments[2];
+	testArguments[1] = static_cast<charPtr>("Play");
+	EXPECT_CALL(*navigationMock, Play()).Times(1);
+	main->Execute(2, testArguments);
+}
+
+TEST_F(CommandLineParsingTestSuite, TestPause)
+{
+	ASSERT_TRUE(true);
+	charPtr testArguments[2];
+	testArguments[1] = static_cast<charPtr>("Pause");
+	EXPECT_CALL(*navigationMock, Pause()).Times(1);
+	main->Execute(2, testArguments);
 }

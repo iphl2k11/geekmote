@@ -14,6 +14,7 @@
 
 class NavigationMock : public INavigation
 {
+public:
 	MOCK_METHOD0(NowPlaying, std::string());
 	MOCK_METHOD0(Play, void());
 	MOCK_METHOD0(Pause, void());
