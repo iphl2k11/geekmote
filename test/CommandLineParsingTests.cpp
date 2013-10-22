@@ -41,7 +41,7 @@ protected:
 
 typedef char* charPtr;
 
-TEST_F(CommandLineParsingTestSuite, TestPlay)
+TEST_F(CommandLineParsingTestSuite, Play)
 {
 	charPtr testArguments[2];
 	testArguments[1] = static_cast<charPtr>("Play");
@@ -49,11 +49,19 @@ TEST_F(CommandLineParsingTestSuite, TestPlay)
 	main->Execute(2, testArguments);
 }
 
-TEST_F(CommandLineParsingTestSuite, TestPause)
+TEST_F(CommandLineParsingTestSuite, Pause)
 {
 	charPtr testArguments[2];
 	testArguments[1] = static_cast<charPtr>("Pause");
 	EXPECT_CALL(*navigationMock, Pause()).Times(1);
+	main->Execute(2, testArguments);
+}
+
+TEST_F(CommandLineParsingTestSuite, Stop)
+{
+	charPtr testArguments[2];
+	testArguments[1] = static_cast<charPtr>("Stop");
+	EXPECT_CALL(*navigationMock, Stop()).Times(1);
 	main->Execute(2, testArguments);
 }
 
