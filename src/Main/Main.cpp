@@ -22,6 +22,19 @@ void Main::Execute(int argc, char** argv)
 	if (argc == 2)
 	{
 		std::string cmd = std::string(argv[1]);
-	    commands[cmd]();
+		if (cmd == std::string("NowPlaying"))
+		{
+			this->m_navigation.NowPlaying();
+			return;
+		}
+
+		Commands::iterator found = commands.find(cmd);
+		if (found == commands.end())
+		{
+			m_help.UnknownParameter();
+			return;
+		}
+
+		found->second();
 	}
 }

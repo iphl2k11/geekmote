@@ -11,6 +11,9 @@
 #include "Main.h"
 
 using ::testing::Test;
+using ::testing::Return;
+
+//TODO move all those "play, pause,stop " words to constants
 
 class CommandLineParsingTestSuite : public ::testing::Test
 {
@@ -34,9 +37,6 @@ protected:
 	NavigationMock* navigationMock;
 	HelpMock* helpMock;
 	Main* main;
-
-
-
 };
 
 typedef char* charPtr;
@@ -65,9 +65,25 @@ TEST_F(CommandLineParsingTestSuite, Stop)
 	main->Execute(2, testArguments);
 }
 
+TEST_F(CommandLineParsingTestSuite, NowPlaying)
+{
+	charPtr testArguments[2];
+	testArguments[1] = static_cast<charPtr>("NowPlaying");
+	EXPECT_CALL(*navigationMock, NowPlaying()).Times(1).WillOnce(Return("Test"));
+	main->Execute(2, testArguments);
+}
+
 TEST_F(CommandLineParsingTestSuite, EmptyParametersList)
 {
 	charPtr testArguments[1]; //empty meaning there is only one parameter - program name
 	EXPECT_CALL(*helpMock, BasicInfo()).Times(1);
 	main->Execute(1, testArguments);
+}
+
+TEST_F(CommandLineParsingTestSuite, UnknownParameter)
+{
+	charPtr testArguments[2];
+	testArguments[1] = static_cast<charPtr>("Unknown");
+	EXPECT_CALL(*helpMock, UnknownParameter()).Times(1);
+	main->Execute(2, testArguments);
 }

@@ -11,7 +11,7 @@
 struct IHelp
 {
 	virtual void BasicInfo() = 0;
-
+	virtual void UnknownParameter() = 0;
 	virtual ~IHelp()
 	{
 

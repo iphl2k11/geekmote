@@ -15,6 +15,7 @@ class HelpMock : public IHelp
 {
 public:
 	MOCK_METHOD0(BasicInfo, void());
+	MOCK_METHOD0(UnknownParameter, void());
 };
 
 

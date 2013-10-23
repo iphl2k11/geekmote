@@ -18,6 +18,7 @@
 #include "INavigation.h"
 #include "IHelp.h"
 
+typedef std::map<std::string, boost::function<void()> > Commands;
 class Main
 {
 public:
@@ -34,7 +35,7 @@ public:
 private:
 	INavigation & m_navigation;
 	IHelp		& m_help;
-	std::map<std::string, boost::function<void()> > commands;
+	Commands commands;
 };
 
 
