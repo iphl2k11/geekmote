@@ -14,6 +14,7 @@ using ::testing::Test;
 using ::testing::Return;
 
 //TODO move all those "play, pause,stop " words to constants
+//Just a comment to test if everything works fine
 
 class CommandLineParsingTestSuite : public ::testing::Test
 {
