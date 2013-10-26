@@ -44,7 +44,7 @@ typedef char* charPtr;
 TEST_F(CommandLineParsingTestSuite, Play)
 {
 	charPtr testArguments[2];
-	testArguments[1] = static_cast<charPtr>("Play");
+    testArguments[1] = "Play";
 	EXPECT_CALL(*navigationMock, Play()).Times(1);
 	main->Execute(2, testArguments);
 }
@@ -52,7 +52,7 @@ TEST_F(CommandLineParsingTestSuite, Play)
 TEST_F(CommandLineParsingTestSuite, Pause)
 {
 	charPtr testArguments[2];
-	testArguments[1] = static_cast<charPtr>("Pause");
+    testArguments[1] = "Pause";
 	EXPECT_CALL(*navigationMock, Pause()).Times(1);
 	main->Execute(2, testArguments);
 }
@@ -60,7 +60,7 @@ TEST_F(CommandLineParsingTestSuite, Pause)
 TEST_F(CommandLineParsingTestSuite, Stop)
 {
 	charPtr testArguments[2];
-	testArguments[1] = static_cast<charPtr>("Stop");
+    testArguments[1] = "Stop";
 	EXPECT_CALL(*navigationMock, Stop()).Times(1);
 	main->Execute(2, testArguments);
 }
@@ -68,7 +68,7 @@ TEST_F(CommandLineParsingTestSuite, Stop)
 TEST_F(CommandLineParsingTestSuite, NowPlaying)
 {
 	charPtr testArguments[2];
-	testArguments[1] = static_cast<charPtr>("NowPlaying");
+    testArguments[1] = "NowPlaying";
 	EXPECT_CALL(*navigationMock, NowPlaying()).Times(1).WillOnce(Return("Test"));
 	main->Execute(2, testArguments);
 }
@@ -83,7 +83,7 @@ TEST_F(CommandLineParsingTestSuite, EmptyParametersList)
 TEST_F(CommandLineParsingTestSuite, UnknownParameter)
 {
 	charPtr testArguments[2];
-	testArguments[1] = static_cast<charPtr>("Unknown");
+    testArguments[1] = "Unknown";
 	EXPECT_CALL(*helpMock, UnknownParameter()).Times(1);
 	main->Execute(2, testArguments);
 }
